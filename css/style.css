@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Exo 2", sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary: #131418;
+  --secondary: darkorange;
+}
+
+main {
+  top: 6rem;
+  position: relative;
+  color: #fff;
+  width: 100%;
+}
+
+/* header */
+header {
+  z-index: 1;
+  width: 100vh;
+  position: fixed !important;
+  top: 0;
+  background-color: #fff;
+}
+
+.header-top {
+  text-align: end;
+  padding: 0.5rem 8rem 0 8rem !important;
+  height: 3rem;
+  color: darkorange;
+}
+
+/* nav */
+nav {
+  z-index: 1;
+  height: 4rem;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8rem !important;
+  position: relative !important;
+  background-color: #131418;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none !important;
+  color: #fff !important;
+  font-size: medium;
+  font-weight: 600;
+  padding: 2.5rem 0.5rem;
+}
+
+nav ul li a:hover {
+  border-bottom: darkorange 2px solid;
+  color: darkorange !important;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+}
+
+.hero-desc {
+  width: 45%;
+  padding: 1rem;
+}
+
+.hero-desc h2 {
+  font-weight: bold;
+}
+
+.hero-image {
+  object-fit: cover;
+  background-repeat: no-repeat;
+  height: 40vh;
+}
+
+/* CARDS START */
+.cards-section {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 5rem;
+  background: linear-gradient(rgba(40, 40, 40, 0.7), rgba(20, 20, 20, 0.7)),
+    url("../img/background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.cards-section h1 {
+  position: relative;
+  width: 100vw;
+}
+
+.card {
+  position: relative;
+  cursor: pointer;
+  width: 20rem;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(255, 144, 32, 1) 100%
+  );
+  box-shadow: darkorange 0 0 7px 0;
+  padding: 1rem;
+  transition: all 0.1s;
+}
+
+.card:hover {
+  scale: 1.02;
+  box-shadow: darkorange 0 0 25px 0;
+
+}
+
+.card-img-top {
+  background: #fff;
+  border: 2px solid darkorange;
+  border-radius: 5px;
+  object-fit: contain;
+  object-position: center;
+  height: 15rem;
+  width: 19rem;
+}
+
+.card-body {
+  margin: 0.5rem 0 0 0 ;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-info {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 2rem;
+}
+
+.card-info p {
+  padding: auto;
+  height: 1.7rem;
+}
+
+.px-2 {
+  background-color: orange;
+}
+
+/* CARDS END */
+
+/* FOOTER */
+footer {
+  color: #131418;
+}
+
+footer div a {
+  color: darkorange;
+}
+
+footer div a :hover {
+  text-decoration: underline darkorange;
+}
+
+/*  mobile screen */
+
+@media screen and (max-width: 767px) {
+  header {
+    position: relative;
+  }
+
+  .header-top {
+    padding: 0.5rem 0.5rem 0 0.5rem !important;
+  }
+
+  nav {
+    position: relative;
+    padding: 0 !important;
+    height: auto;
+    text-align: center;
+  }
+  nav ul li a {
+    margin-bottom: 1rem;
+  }
+
+  .hero {
+    padding: 1rem;
+    height: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-desc {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  nav {
+    padding: 0 1rem !important;
+  }
+
+  .hero {
+    padding: 1rem;
+    height: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+}
+
+/* DARK MODE */
+.card.dark-mode,
+header.dark-mode,
+body.dark-mode,
+footer.dark-mode {
+  background-color: #222222;
+  color: #fff;
+}
+/* END DARK MODE */
+
+/* SWITCH */
+.toggle-switch {
+  position: relative;
+  width: 60px;
+  height: 34px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+  background-color: darkorange;
+}
+
+input:checked + .toggle-slider:before {
+  transform: translateX(26px);
+}
+
+.toggle-slider.round {
+  border-radius: 34px;
+}
+
+.toggle-slider.round:before {
+  border-radius: 50%;
+}
+/* END SWITCH */
