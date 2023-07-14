@@ -25,7 +25,7 @@
         body.classList.toggle("dark-mode");
 
         const header = document.querySelector("header");
-        header.classList`.toggle("dark-mode");
+        header.classList.toggle("dark-mode");
 
         const footer = document.querySelector("footer");
         footer.classList.toggle("dark-mode");
